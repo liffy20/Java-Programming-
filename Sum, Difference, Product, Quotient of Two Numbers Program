@@ -1,0 +1,23 @@
+
+package AssignmentOneQuestion1;
+
+import java.util.Scanner; // import scanner package
+
+public class A1Q1 {
+
+	public static void main(String[] args) {
+
+		Scanner input = new Scanner(System.in);
+		System.out.println("Please enter an integer"); // ask for first int
+		int n = input.nextInt(); // assign first int to a variable
+		System.out.println("Please enter another integer"); // ask for a second int
+		int m = input.nextInt(); // assign second int to a variable
+
+		System.out.println("The sum of the the integers are: " + (n + m)); // do various operations
+		System.out.println("The difference of the the integers are: " + (n - m));
+		System.out.println("The product of the the integers are: " + (n * m));
+		System.out.println("The quotient of the the integers are: " + (n / m));
+
+	}
+
+}
