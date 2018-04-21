@@ -1,0 +1,87 @@
+import java.awt.Color; //import all needed packages 
+import java.awt.Font;
+
+import javax.swing.JButton;
+
+import javax.swing.JFrame;
+import javax.swing.JPanel;
+import javax.swing.JRadioButton;
+
+import javax.swing.JTextField;
+import javax.swing.border.LineBorder;
+
+public class A2Q2 {
+	public static void main(String[] args) {
+		JFrame frame = new JFrame("JAC444_Assignment"); // create new frame with label
+		frame.setVisible(true); // set frame to be visible
+		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE); // close program when X is pushed
+		frame.setSize(740, 500); // set size of frame
+		JPanel panel1 = new JPanel(); // create panel within frame
+		Font myFont = new Font("Arial", Font.BOLD, 20); // create font elements for some labels
+		Font myFont2 = new Font("Arial", 20, 20);
+
+		panel1.setLayout(null); // create a null layout so components can be positioned as desired
+
+		frame.add(panel1); // add panel to frame
+		frame.setBackground(new Color(225, 225, 225)); // set background of frame
+
+		JButton Ok = new JButton("OK"); // create button
+		Ok.setBackground(new Color(225, 225, 225)); // set background of button
+
+		Ok.setForeground(Color.black); // set foreground colour of button
+		Ok.setBorder(new LineBorder(new Color(255, 255, 255), 4)); // create line border and set colour
+		Ok.setBounds(0, 0, 100, 444); // position and size button
+		Ok.setFont(myFont); // set desired font for button
+
+		JButton A = new JButton("A");
+		A.setBounds(100, 393, 200, 50);
+		A.setBackground(new Color(225, 225, 225));
+		A.setFont(myFont2);
+
+		JButton B = new JButton("B");
+		B.setBounds(300, 393, 200, 50);
+		B.setBackground(new Color(225, 225, 225));
+		B.setFont(myFont2);
+
+		JButton C = new JButton("C");
+		C.setBounds(500, 393, 200, 50);
+		C.setBackground(new Color(225, 225, 225));
+		C.setFont(myFont2);
+
+		JTextField One = new JTextField(" "); // create text field
+		One.setBounds(175, 40, 150, 40); // set position and size of text field
+
+		JTextField Two = new JTextField(" ");
+		Two.setBounds(460, 40, 150, 40);
+
+		JButton replace = new JButton("Replace");
+		replace.setBounds(330, 38, 125, 45);
+		replace.setBackground(new Color(225, 225, 225));
+		replace.setFont(myFont2);
+
+		JRadioButton ang = new JRadioButton("Case Sensitive"); // create radio button with label
+		ang.setBounds(125, 134, 200, 50); //set size and position of radio button
+		ang.setFont(myFont2); // set font of radio button 
+
+		JRadioButton bang = new JRadioButton("Lower case");
+		bang.setBounds(160, 171, 200, 50);
+		bang.setFont(myFont2);
+
+		JRadioButton hang = new JRadioButton("Upper case");
+		hang.setBounds(196, 211, 200, 50);
+		hang.setFont(myFont2);
+
+		panel1.add(Ok); // add respective components to panel
+		panel1.add(A);
+		panel1.add(B);
+		panel1.add(C);
+		panel1.add(One);
+		panel1.add(replace);
+		panel1.add(Two);
+		panel1.add(ang);
+		panel1.add(bang);
+		panel1.add(hang);
+		frame.revalidate(); // ensure all components show up in frame upon running program
+		frame.repaint();
+	}
+}
