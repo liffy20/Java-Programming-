@@ -1,0 +1,74 @@
+import java.awt.Color; //important needed 
+
+import java.awt.Font;
+
+import javax.swing.JButton;
+
+import javax.swing.JFrame;
+
+import javax.swing.JTextField;
+
+public class A2Q3 {
+
+	public static void main(String[] args) {
+		JFrame frame = new JFrame("Seneca_Sign Up"); // create new frame with label
+		frame.setVisible(true); // set frame to be visible
+		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE); // close program when X is clicked
+		frame.setSize(623, 620); // set size of frame
+		frame.setLayout(null); // set null layout of frame to allow for absolute positioning
+
+		JButton btnNewButton = new JButton("Sign Up"); // create button
+		btnNewButton.setBackground(new Color(225, 225, 225)); // set colour of button
+
+		btnNewButton.setBounds(134, 64, 169, 34); // position and resize button
+		frame.add(btnNewButton); // add button to frame
+		Font myFont = new Font("Arial", 0, 16); // create font elements for label
+		Font myFont2 = new Font("Arial", 0, 18); // create font elements for label
+
+		JButton btnNewButton_1 = new JButton("Log In"); // create button with label
+		btnNewButton_1.setBounds(304, 64, 177, 34);
+		btnNewButton.setFont(myFont); // set font for button
+
+		btnNewButton_1.setBackground(new Color(225, 225, 225)); //set background color for button
+		btnNewButton_1.setFont(myFont); //set font for button
+		frame.add(btnNewButton_1);
+
+		JButton btnNewButton_2 = new JButton("Sign Up for Free");
+		btnNewButton_2.setFont(myFont2);
+		btnNewButton_2.setBackground(Color.CYAN);
+		btnNewButton_2.setBounds(219, 142, 177, 34);
+		frame.add(btnNewButton_2);
+
+		JButton btnGetStarted = new JButton("Get Started...");
+		btnGetStarted.setBackground(Color.CYAN); // set background colour for button
+		btnGetStarted.setFont(myFont2);
+		btnGetStarted.setBounds(219, 494, 177, 34);
+
+		JTextField txtFirstName = new JTextField("First Name..."); // create text field with label
+		txtFirstName.setBounds(118, 230, 169, 39); // position and size button
+		frame.add(txtFirstName); // add text field to frame
+		txtFirstName.setFont(myFont); // set font for text field
+
+		JTextField txtLastName = new JTextField("Last Name...");
+		txtLastName.setFont(myFont);
+		txtLastName.setBounds(324, 230, 169, 39);
+		frame.add(txtLastName);
+
+		JTextField txtEmailAddres = new JTextField("Email Address...");
+		txtEmailAddres.setFont(myFont);
+		txtEmailAddres.setBounds(118, 333, 379, 34);
+		frame.add(txtEmailAddres);
+
+		JTextField txtSetAPassword = new JTextField("Set a Password...");
+		txtSetAPassword.setFont(myFont);
+
+		txtSetAPassword.setBounds(118, 414, 379, 34);
+		frame.add(txtSetAPassword);
+
+		frame.revalidate(); // ensure all components show up in frame upon running program
+		frame.repaint();
+
+		frame.add(btnGetStarted); // add button to frame
+
+	}
+}
