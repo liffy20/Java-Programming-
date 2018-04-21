@@ -1,0 +1,212 @@
+import java.awt.Color; // add all needed packages
+import java.awt.Font;
+import java.awt.GridLayout;
+import javax.swing.JButton;
+import javax.swing.JFrame;
+import javax.swing.JLabel;
+import javax.swing.JPanel;
+import javax.swing.JTextField;
+import javax.swing.border.LineBorder;
+
+public class A2Q4v2 {
+
+	public static void main(String[] args) {
+		JFrame frame = new JFrame("Calculator"); // create new frame with label
+		frame.setForeground(Color.WHITE); // set foreground of frame
+		frame.setVisible(true); // make sure frame is visible
+		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE); // ensure frame closes when X is pressed
+		frame.setSize(688, 479); // set size of frame
+		frame.setLayout(null); // use absolute positioning to ensure exact positioning of components
+
+		Font myFont = new Font("Arial", 0, 16); // create font
+
+		JTextField txtTextbox = new JTextField("TextBox...."); // create new text field
+		txtTextbox.setFont(myFont); // set font for text field
+		txtTextbox.setBounds(15, 46, 607, 35); // set position and size of textbox
+		frame.add(txtTextbox); // add it to the frame
+
+		JLabel lblEdit = new JLabel("Edit"); // create label
+		lblEdit.setBounds(15, 16, 69, 20); // set position and size of label
+		frame.add(lblEdit); // add lable to frame
+		lblEdit.setFont(myFont); // set font of label
+
+		JLabel lblView = new JLabel("View");
+		lblView.setBounds(59, 16, 69, 20);
+		frame.add(lblView);
+		lblView.setFont(myFont);
+
+		JLabel lblHelp = new JLabel("Help");
+		lblHelp.setBounds(111, 16, 69, 20);
+		frame.add(lblHelp);
+		lblHelp.setFont(myFont);
+
+		JPanel panel = new JPanel(); // create panel to house other panel that houses buttons
+		panel.setBorder(new LineBorder(Color.LIGHT_GRAY)); // set border of panel
+		panel.setBounds(15, 108, 303, 280); // position and size panel
+		frame.add(panel); // add panel to frame
+		panel.setLayout(null); // set absolute positioning of panel
+
+		JPanel panel_1 = new JPanel(); // create new panel to go inside other panel
+		panel_1.setBounds(7, 25, 289, 227);
+		panel.add(panel_1);
+		panel_1.setLayout(new GridLayout(4, 3, 5, 5)); // create grid layout for buttons inside panel
+
+		JButton btnSqrt = new JButton("Sqrt"); // create button with label
+
+		btnSqrt.setBackground(new Color(225, 225, 225)); // set background colour for button
+		btnSqrt.setFont(myFont); // set button font
+		panel_1.add(btnSqrt); // add button to panel
+
+		JButton btnx = new JButton("1/x");
+		btnx.setBackground(new Color(225, 225, 225));
+		btnx.setFont(myFont);
+		panel_1.add(btnx);
+
+		JButton btnSin = new JButton("Sin");
+		btnSin.setBackground(new Color(225, 225, 225));
+		btnSin.setFont(myFont);
+		panel_1.add(btnSin);
+
+		JButton button = new JButton("%");
+		button.setBackground(new Color(225, 225, 225));
+		button.setFont(myFont);
+		panel_1.add(button);
+
+		JButton btnExp = new JButton("Exp");
+		btnExp.setBackground(new Color(225, 225, 225));
+		btnExp.setFont(myFont);
+
+		panel_1.add(btnExp);
+
+		JButton btnCos = new JButton("Cos");
+		btnExp.setFont(myFont);
+		btnCos.setFont(myFont);
+		btnCos.setBackground(new Color(225, 225, 225));
+		btnExp.setFont(myFont);
+		panel_1.add(btnCos);
+		JButton btnXy = new JButton("x^y");
+		btnXy.setFont(myFont);
+		btnXy.setBackground(new Color(225, 225, 225));
+		panel_1.add(btnXy);
+
+		JButton btnLn = new JButton("ln");
+		btnExp.setFont(myFont);
+		btnLn.setBackground(new Color(225, 225, 225));
+		btnLn.setFont(myFont);
+		panel_1.add(btnLn);
+
+		JButton btnTan = new JButton("tan");
+		btnTan.setFont(myFont);
+		btnTan.setBackground(new Color(225, 225, 225));
+		panel_1.add(btnTan);
+		JButton btnX = new JButton("X^2");
+		btnX.setBackground(new Color(225, 225, 225));
+		panel_1.add(btnX);
+		btnX.setFont(myFont);
+
+		JButton n = new JButton("n!");
+		n.setFont(myFont);
+		n.setBackground(new Color(225, 225, 225));
+		panel_1.add(n);
+
+		JButton Sec = new JButton("Sec");
+		Sec.setFont(myFont);
+		Sec.setBackground(new Color(225, 225, 225));
+		panel_1.add(Sec);
+
+		JPanel panel_2 = new JPanel();
+		panel_2.setBorder(new LineBorder(Color.LIGHT_GRAY));
+		panel_2.setBounds(333, 108, 303, 280);
+		frame.add(panel_2);
+		panel_2.setLayout(null);
+
+		JPanel panel_3 = new JPanel();
+		panel_3.setBounds(9, 25, 289, 227);
+		panel_2.add(panel_3);
+		panel_3.setLayout(new GridLayout(4, 3, 5, 5));
+
+		JButton seven = new JButton("7");
+		seven.setFont(myFont);
+		seven.setBackground(new Color(225, 225, 225));
+		panel_3.add(seven);
+
+		JButton eight = new JButton("8");
+		eight.setFont(myFont);
+		eight.setBackground(new Color(225, 225, 225));
+		panel_3.add(eight);
+
+		JButton nine = new JButton("9");
+		nine.setFont(myFont);
+		nine.setBackground(new Color(225, 225, 225));
+		panel_3.add(nine);
+
+		JButton slash = new JButton("/");
+		slash.setFont(myFont);
+		slash.setBackground(new Color(225, 225, 225));
+		panel_3.add(slash);
+
+		JButton four = new JButton("4");
+		four.setFont(myFont);
+		four.setBackground(new Color(225, 225, 225));
+		panel_3.add(four);
+
+		JButton five = new JButton("5");
+		five.setFont(myFont);
+		five.setBackground(new Color(225, 225, 225));
+		panel_3.add(five);
+
+		JButton six = new JButton("6");
+		six.setFont(myFont);
+		six.setBackground(new Color(225, 225, 225));
+		panel_3.add(six);
+
+		JButton aster = new JButton("*");
+		aster.setFont(myFont);
+		aster.setBackground(new Color(225, 225, 225));
+		panel_3.add(aster);
+
+		JButton one = new JButton("1");
+		one.setFont(myFont);
+		one.setBackground(new Color(225, 225, 225));
+		panel_3.add(one);
+
+		JButton two = new JButton("2");
+		two.setFont(myFont);
+		two.setBackground(new Color(225, 225, 225));
+		panel_3.add(two);
+
+		JButton three = new JButton("3");
+		three.setFont(myFont);
+		three.setBackground(new Color(225, 225, 225));
+		panel_3.add(three);
+
+		JButton dash = new JButton("-");
+		dash.setFont(myFont);
+		dash.setBackground(new Color(225, 225, 225));
+		panel_3.add(dash);
+
+		JButton zero = new JButton("0");
+		zero.setFont(myFont);
+		zero.setBackground(new Color(225, 225, 225));
+		panel_3.add(zero);
+
+		JButton period = new JButton(".");
+		period.setFont(myFont);
+		period.setBackground(new Color(225, 225, 225));
+		panel_3.add(period);
+
+		JButton equal = new JButton("=");
+		equal.setFont(myFont);
+		equal.setBackground(new Color(225, 225, 225));
+		panel_3.add(equal);
+
+		JButton plus = new JButton("+");
+		plus.setFont(myFont);
+		plus.setBackground(new Color(225, 225, 225));
+		panel_3.add(plus);
+
+		frame.revalidate(); // ensure all components and panels show up when starting program
+		frame.repaint();
+
+	}
+}
