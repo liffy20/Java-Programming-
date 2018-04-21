@@ -1,0 +1,26 @@
+package AssignmentOneQuestion3;
+
+import java.util.Scanner;
+
+public class A1Q3 {
+
+	public static void main(String[] args) {
+
+		Scanner input = new Scanner(System.in); //declare scanner variable
+		System.out.println("Please enter the quantity of item #1 ($239.99) sold by the salesman: "); //ask for quantity of each item sold by salesman
+		int itemone = input.nextInt();
+		System.out.println("Please enter the quantity of item #2 ($129.75) sold by the salesman: ");
+		int itemtwo = input.nextInt();
+		System.out.println("Please enter the quantity of item #3 ($99.95) sold by the salesman: ");
+		int itemthree = input.nextInt();
+		System.out.println("Please enter the quantity of item #4 ($350.89) sold by the salesman: ");
+		int itemfour = input.nextInt();
+
+		double sales = ((itemone * 239.99) + (itemtwo * 129.75) + (itemthree * 99.95 + (itemfour * 350.89))); //calculate total sales by multiplying quantity of each item by item price
+		double comm = sales * 0.09; // commission is 9% of total sales
+		double earnings = comm + 200; // add commission to weekly salary
+
+		System.out.printf("The salespersons total earnings are: $%.2f", earnings);
+
+	}
+}
