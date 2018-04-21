@@ -1,0 +1,20 @@
+package Assignment1OneQuestion4;
+
+public class A1Q4 {
+
+	public static void main(String[] args) {
+
+		int fact = 1; // initialize factorial variable
+
+		System.out.println(" Number                       Number!");
+		for (int i = 1; i <= 5; i++) {
+
+			fact *= i; // to calculate factorial! multiply by incremented i variable and assign to var
+						// fact in a loop
+
+			System.out.printf("%4d%,30d\n", i, fact); // print values in a clean format
+		}
+
+	}
+
+}
