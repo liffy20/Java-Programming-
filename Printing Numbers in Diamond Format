@@ -1,0 +1,46 @@
+public class A2Q5 {
+
+	public static void main(String[] args) {
+		int x, d, k, m = 1; // create int variables
+
+		for (x = 1; x <= 5; x++) { // main for loop for top of diamond
+
+			System.out.print(" "); // print spaced that will go to the left of the numbers (creates diamond shape)
+			if (m != 11)
+				System.out.print("  "); // prints special spacing conditions for all lines that is not the middle line
+										// of diamond
+
+			for (d = 1; d <= 5 - x; d++) // iterate d variable that helps create diamond shape
+
+				System.out.print(" ");
+
+			for (k = 1; k <= x; k++, m++) // iterate variable that actually prints the number
+
+				System.out.print(m + " "); // print variable with shape
+			System.out.print(" ");
+
+			System.out.println(); // prints new line every time it is finished printing wcertain part of diamond
+		}
+
+		for (x = 1; x <= 4; x++) { // repeat of top part of the diamond but prints shape in mirror format
+			System.out.print(" ");
+
+			for (d = 1; d <= x; d++)
+				System.out.print(" ");
+			System.out.print(" ");
+
+			for (k = 1; k <= 5 - x; k++, m++)
+				System.out.print(m + " ");
+
+			System.out.println();
+			if (m == 23) // create special conditions that print particular spacing for end of diamond
+							// (so perfect diamond shape is achieved)
+				System.out.print(" ");
+			if (m == 25)
+				System.out.print(" ");
+
+		}
+
+	}
+
+}
